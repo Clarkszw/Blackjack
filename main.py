@@ -105,7 +105,7 @@ def dealer_check(dealer, deck):
 
     while True:
 
-        if points <= 17:
+        if points < 17:
             hit = deck.hit()
             print(f'The dealer hits and is dealt: {hit}')
             dealer.append(hit)
