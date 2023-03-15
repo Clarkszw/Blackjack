@@ -19,9 +19,10 @@ def test_get_bet(capsys):
         # capture the standard output
         out, _ = capsys.readouterr()
         # check if the output contains error messages for invalid inputs
-        assert f"You don't have enough balance(${balance}) to bet.." in out
-        assert "The minimum bet is $1." in out
-        assert "Please enter a number." in out
+        print(out)
+        assert f"You don't have enough balance(${balance}) to bet.." == out[0:44]
+        assert "The minimum bet is $1." == out[45:67]
+        assert "Please enter a number." == out[68:90]
 
 
 def test_player_get_start(dk, capsys):
